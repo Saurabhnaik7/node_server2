@@ -7,16 +7,18 @@ const MessageItem = ({
     name,
     from,
     body,
-    type
+    type,
+    timestamp
   }
 }) => {
   return (
-    <div className='profile bg-light'>
+    <div className='message bg-light'>
       <div>
         <p>Name :  {name}</p>
         <p>Phone Number :  {from}</p>
         <p>Message :  {body}</p>
         <p>Type :  {type}</p>
+        <p>Timestamp :  {timestamp}</p>
       </div>
     </div>
   );

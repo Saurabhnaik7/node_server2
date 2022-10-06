@@ -6,7 +6,9 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Messages from './components/messages/Messages';
+import SentMessages from './components/messages/SentMessages';
 import PrivateRoute from './components/routing/PrivateRoute';
+import Dashboard from './components/layout/Dashboard';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -35,7 +37,9 @@ const App = () => {
           <Route path="/" element={<Landing />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
+          <Route path="dashboard" element={<PrivateRoute component={Dashboard} />} />
           <Route path="messages" element={<PrivateRoute component={Messages} />} />
+          <Route path="sentmessages" element={<PrivateRoute component={SentMessages}s />} />
         </Routes>
       </Router>
     </Provider>

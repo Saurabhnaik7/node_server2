@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import MessageItem from './MessageItem';
 import { getMessages } from '../../actions/message';
+import { Link } from 'react-router-dom';
 
 const Messages = ({ getMessages, message : {messages ,loading}}) => {
   useEffect(() => {
@@ -12,8 +13,13 @@ const Messages = ({ getMessages, message : {messages ,loading}}) => {
   return(
     <section className="container">
         <Fragment>
-          <h1 className="medium text-primary">Messages</h1>
-          <div className="profiles">
+        <Link to="/dashboard" className="btn">
+          Back To Dashboard
+        </Link>
+          <br />
+          <h1 className="medium text-primary">Received Messages</h1>
+          <br/>
+          <div>
             {messages.length > 0 ? (
               messages.map((message) => (
                 <MessageItem key={message._id} message={message} />

@@ -30,7 +30,7 @@ import PropTypes from 'prop-types';
     };
   
     if (isAuthenticated) {
-      return <Navigate to="/messages" />;
+      return <Navigate to="/dashboard" />;
     }
   
   return (
